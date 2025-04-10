@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33529.622
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Project", "Project", "{60C13A9A-BB9F-44DD-AE96-DB605312D5BA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Foundation", "Foundation", "{6CB86F41-55AA-4EF4-821D-6758A731FC47}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Feature", "Feature", "{77CB16BB-BF2C-4666-8A22-41F0A1D13463}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tata.Project.TataGroupWeb", "src\Project\TataGroup\Website\code\Tata.Project.TataGroupWeb.csproj", "{B563EE9B-3959-46CF-A037-367633EABB2D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B563EE9B-3959-46CF-A037-367633EABB2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B563EE9B-3959-46CF-A037-367633EABB2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B563EE9B-3959-46CF-A037-367633EABB2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B563EE9B-3959-46CF-A037-367633EABB2D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B563EE9B-3959-46CF-A037-367633EABB2D} = {60C13A9A-BB9F-44DD-AE96-DB605312D5BA}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2273B524-1031-40D6-9104-12E2E425F337}
+	EndGlobalSection
+EndGlobal
