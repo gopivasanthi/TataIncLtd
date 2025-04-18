@@ -17,7 +17,16 @@ namespace Tata.Project.TataGroupWeb.Controllers
         public ActionResult Index()
         {
             var rederingContextItem = RenderingContext.Current.ContextItem;
-            var headerTitle = rederingContextItem.Fields["HeaderTitle"].Value;
+            var currentContextItem = Sitecore.Context.Item;
+            var rootPath = Sitecore.Context.Site.StartPath;
+            var contextDatabase = Sitecore.Context.Database;
+            var homeItem = contextDatabase.GetItem(rootPath);
+            NavigationItem headerHomeNavigation = new NavigationItem()
+            {
+                DisplayName = rederingContextItem.Fields["HeaderTitle"].Value,
+                NavigationUrl = LinkManager.GetItemUrl(homeItem),
+                IsCurrentItem = homeItem.ID == currentContextItem.ID
+            };
             ImageField headerLogo = rederingContextItem.Fields["HeaderLogo"];
             MultilistField headerNavigationItems = rederingContextItem.Fields["HeaderNavigationItems"];
             var headerNavItems = headerNavigationItems
@@ -25,20 +34,31 @@ namespace Tata.Project.TataGroupWeb.Controllers
                                     .Select(x => new NavigationItem
                                     {
                                         DisplayName = x.Fields["PageIntro"].Value,
-                                        NavigationUrl = LinkManager.GetItemUrl(x)
+                                        NavigationUrl = LinkManager.GetItemUrl(x),
+                                        IsCurrentItem = x.ID == currentContextItem.ID
                                     }).ToList();
-            TataImage imageItem = new TataImage()
+            if (headerLogo != null && headerNavigationItems != null)
             {
-                ImageUrl = MediaManager.GetMediaUrl(headerLogo.MediaItem),
-                ImageAlt = headerLogo.Alt
-            };
-            HeaderNavigation headerNavigation = new HeaderNavigation()
+                TataImage imageItem = new TataImage()
+                {
+                    ImageUrl = MediaManager.GetMediaUrl(headerLogo.MediaItem),
+                    ImageAlt = headerLogo.Alt
+                };
+                HeaderNavigation headerNavigation = new HeaderNavigation()
+                {
+                    HeaderTitle = headerHomeNavigation,
+                    HeaderLogo = imageItem,
+                    HeaderNavigationItems = headerNavItems
+                };
+                return View("~/Views/Tata/Header/Index.cshtml", headerNavigation);
+            }
+            HeaderNavigation headerNavigationEmpty = new HeaderNavigation()
             {
-                HeaderTitle = headerTitle,
-                HeaderLogo = imageItem,
-                HeaderNavigationItems = headerNavItems
+                HeaderTitle = headerHomeNavigation,
+                HeaderLogo = new TataImage(),
+                HeaderNavigationItems = new List<NavigationItem>()
             };
-            return View("~/Views/Tata/Header/Index.cshtml", headerNavigation);
+            return View("~/Views/Tata/Header/Index.cshtml", headerNavigationEmpty);
         }
     }
 }

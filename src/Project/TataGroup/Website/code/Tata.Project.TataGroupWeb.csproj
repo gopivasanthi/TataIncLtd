@@ -43,8 +43,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\..\..\..\..\packages\Microsoft.Bcl.AsyncInterfaces.6.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\library\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Extensions.Configuration, Version=6.0.0.1, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
@@ -433,11 +434,26 @@
     <Content Include="Views\Tata\TataGroupWebLayout.cshtml" />
     <Content Include="Views\Tata\Home\HomeBanner.cshtml" />
     <Content Include="Views\Tata\Header\Index.cshtml" />
+    <Content Include="Views\Tata\HeroPage\Index.cshtml" />
+    <Content Include="Views\Tata\Home\Carousel.cshtml" />
+    <Content Include="App_Config\Include\Tata\Tatainc.sitedefinition.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Config\Include\Tata\Tatamotors.sitedefinition.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Config\Include\Tata\TataConsultancy.sitedefinition.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\CarouselController.cs" />
     <Compile Include="Controllers\HeaderController.cs" />
+    <Compile Include="Controllers\HeroPageController.cs" />
+    <Compile Include="Models\CarouselItem.cs" />
     <Compile Include="Models\HeaderNavigation.cs" />
+    <Compile Include="Models\HeroPage.cs" />
     <Compile Include="Models\NavigationItem.cs" />
     <Compile Include="Models\TataImage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -454,6 +470,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Carousel\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

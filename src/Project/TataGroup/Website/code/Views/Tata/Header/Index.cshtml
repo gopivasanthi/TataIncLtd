@@ -2,16 +2,16 @@
 
 <div class="container">
     <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-            <img src="@Model.HeaderLogo.ImageUrl" alt="@Model.HeaderLogo.ImageAlt" />
-            <span class="fs-4">@Model.HeaderTitle</span>
+        <a href="@Model.HeaderTitle.NavigationUrl" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+            <img class="bi me-2" width="40" height="32" src="@Model.HeaderLogo.ImageUrl" alt="@Model.HeaderLogo.ImageAlt" />
+            <span class="fs-4">@Model.HeaderTitle.DisplayName</span>
         </a>
 
         <ul class="nav nav-pills">
             @foreach (var navItem in Model.HeaderNavigationItems)
             {
                 <li class="nav-item">
-                    <a href="@navItem.NavigationUrl" class="nav-link" aria-current="page">
+                    <a href="@navItem.NavigationUrl" class="nav-link @(navItem.IsCurrentItem ? "active" : "")" aria-current="page">
                         @navItem.DisplayName
                     </a>
                 </li>

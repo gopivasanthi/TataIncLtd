@@ -7,7 +7,7 @@ namespace Tata.Project.TataGroupWeb.Models
 {
     public class HeaderNavigation
     {
-        public string HeaderTitle { get; set; }
+        public NavigationItem HeaderTitle { get; set; }
         public TataImage HeaderLogo { get; set; }
         public List<NavigationItem> HeaderNavigationItems { get; set; }
     }

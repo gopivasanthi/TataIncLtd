@@ -9,5 +9,6 @@ namespace Tata.Project.TataGroupWeb.Models
     {
         public string DisplayName { get; set; }
         public string NavigationUrl { get; set; }
+        public bool IsCurrentItem { get; set; }
     }
 }
