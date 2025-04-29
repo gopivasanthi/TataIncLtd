@@ -1,0 +1,18 @@
+﻿---
+ID: "b267cb93-d4ea-4add-9527-b39e58de2fa6"
+Parent: "dff538ad-ce5e-43f9-a58d-d319843ba663"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Project/TataGroup/HelpPage/Help
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250429T123355Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
