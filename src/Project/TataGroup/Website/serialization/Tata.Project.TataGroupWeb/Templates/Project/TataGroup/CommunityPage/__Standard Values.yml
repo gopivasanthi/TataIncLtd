@@ -1,0 +1,43 @@
+﻿---
+ID: "f9231107-4e95-4a96-8399-3a7b73b8e9e8"
+Parent: "69aa129a-12ec-4d65-b3c1-0cc695a2273e"
+Template: "69aa129a-12ec-4d65-b3c1-0cc695a2273e"
+Path: /sitecore/templates/Project/TataGroup/CommunityPage/__Standard Values
+DB: master
+SharedFields:
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{EDDC931E-17C3-41C2-B7F1-21D6B5089123}">
+        <r
+          ds="{253D5997-D69A-48D8-AA71-94AF0D5A3711}"
+          id="{63378353-33BA-4A83-B4C8-C7AC4A0733DA}"
+          par="CSSStyles"
+          ph="main"
+          uid="{D66CA623-10E9-404E-B04D-92421E2A0821}"
+          ccb="Clear on publish" />
+        <r
+          id="{F063E254-E461-4C54-9EF0-E336DBFF44E7}"
+          ph="main"
+          uid="{7B58E7BB-86DD-417C-982E-0E661119D1A8}" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250410T063948Z
+    - ID: "531abd36-0af7-4b78-a139-c74bd8e13e70"
+      Hint: PageIntro
+      Value: $name
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

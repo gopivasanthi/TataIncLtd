@@ -1,0 +1,53 @@
+﻿---
+ID: "f3be3017-85b1-4dcc-baeb-e525126715f0"
+Parent: "f4dd066d-cbca-4ca3-a48d-fb65fa086e13"
+Template: "f4dd066d-cbca-4ca3-a48d-fb65fa086e13"
+Path: /sitecore/templates/Project/TataGroup/TataIncHomePage/__Standard Values
+DB: master
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: |
+    {4C2B3F1B-6EB2-4E9D-B495-5CBD967B738D}
+    {7FBEB4FB-50AE-4F26-88E2-286F8F6B0D0F}
+    {B031368F-A876-4DDC-BB19-6B9EBF9D128F}
+    {69AA129A-12EC-4D65-B3C1-0CC695A2273E}
+    {4D77439C-0318-477E-9835-931A2CF4C46B}
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{EDDC931E-17C3-41C2-B7F1-21D6B5089123}">
+        <r
+          ds="{253D5997-D69A-48D8-AA71-94AF0D5A3711}"
+          id="{63378353-33BA-4A83-B4C8-C7AC4A0733DA}"
+          par="CSSStyles"
+          ph="main"
+          uid="{1AF0D3DD-3105-4005-ACBE-7DA357A43764}"
+          ccb="Clear on publish" />
+        <r
+          id="{17E05EBE-8DED-403E-AAAD-9ACC8D482B2E}"
+          ph="main"
+          uid="{0EA24B6B-00C3-4ADE-AD91-1D156415C644}" />
+        <r
+          id="{4C1A8309-2239-4A72-A201-8963500D1278}"
+          ph="main"
+          uid="{A6C631D6-F16B-4815-871F-99F1F7841ADF}" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250408T130904Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
