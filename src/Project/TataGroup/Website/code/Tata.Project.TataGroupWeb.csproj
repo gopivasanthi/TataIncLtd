@@ -172,6 +172,9 @@
     <Reference Include="Sitecore.Data.ResourceItems.ProtobufNet, Version=19.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\..\..\..\packages\Sitecore.Data.ResourceItems.ProtobufNet.10.4.0\lib\netstandard2.0\Sitecore.Data.ResourceItems.ProtobufNet.dll</HintPath>
     </Reference>
+    <Reference Include="Sitecore.ExperienceForms, Version=9.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\packages\Sitecore.ExperienceForms.10.4.0\lib\net48\Sitecore.ExperienceForms.dll</HintPath>
+    </Reference>
     <Reference Include="Sitecore.Framework.Conditions, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\..\..\..\packages\Sitecore.Framework.Conditions.6.0.0\lib\netstandard2.0\Sitecore.Framework.Conditions.dll</HintPath>
     </Reference>
@@ -474,6 +477,7 @@
     <Content Include="App_Config\Include\Unicorn\Unicorn.Remote.config.disabled" />
     <Content Include="App_Config\Include\Unicorn\Unicorn.PowerShell.config" />
     <Content Include="App_Config\Include\Unicorn\Unicorn.Dilithium.config.example" />
+    <Content Include="App_Config\Include\Tata\Tata.Pipelines.TataAliasResolver.config" />
     <None Include="App_Config\Include\Unicorn\Unicorn.DataProvider.config.disabled" />
     <Content Include="App_Config\Include\Unicorn\Unicorn.DataProvider.10.1.config" />
     <Content Include="App_Config\Include\Unicorn\Unicorn.CustomSerializationFolder.config.example" />
@@ -483,6 +487,8 @@
     <Content Include="App_Config\Include\Unicorn\Unicorn.config" />
     <Content Include="App_Config\Include\Unicorn\Unicorn.AutoPublish.config" />
     <Content Include="App_Config\Include\Tata\Tata.Project.Serialization.config" />
+    <Content Include="Views\Tata\Forms\TataCommentsForm.cshtml" />
+    <Content Include="Views\Tata\Forms\SubmissionSuccess.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -490,12 +496,17 @@
     <Compile Include="Controllers\FeaturedHeroController.cs" />
     <Compile Include="Controllers\HeaderController.cs" />
     <Compile Include="Controllers\HeroPageController.cs" />
+    <Compile Include="Controllers\TataCommentsFormController.cs" />
+    <Compile Include="Custom\Pipelines\TataAliasResolver.cs" />
     <Compile Include="Models\CarouselItem.cs" />
+    <Compile Include="Models\CommentsForm.cs" />
     <Compile Include="Models\HeaderNavigation.cs" />
     <Compile Include="Models\HeroPage.cs" />
     <Compile Include="Models\NavigationItem.cs" />
     <Compile Include="Models\TataImage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SitecoreItemConstants.cs" />
+    <Compile Include="SitecoreTemplateConstants.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Views\web.config" />
@@ -511,6 +522,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Views\Carousel\" />
     <Folder Include="Views\FeaturedHero\" />
+    <Folder Include="Views\TataCommentsForm\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

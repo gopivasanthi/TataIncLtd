@@ -1,0 +1,17 @@
+﻿@model Tata.Project.TataGroupWeb.Models.CommentsForm
+<h1>Give your comments here... </h1>
+<form method="post">
+    <div>
+        <label id="UserNameLabel" name="UserNameLabel">@Model.UserNameLabel</label>
+        <input type="text" id="UserName" name="UserName" value="@Model.UserName" />
+    </div>
+    <div>
+        <label id="GenderLabel" name="GenderLabel">@Model.GenderLabel</label>
+        <input type="text" id="Gender" name="Gender" value="@Model.Gender" />
+    </div>
+    <div>
+        <label id="CommentsLabel" name="CommentsLabel">@Model.CommentsLabel</label>
+        <input type="text" id="Comment" name="Comment" value="@Model.Comment" />
+    </div>
+    <input type="submit" value="Submit" />
+</form>
